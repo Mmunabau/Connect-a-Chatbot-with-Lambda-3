@@ -1,4 +1,4 @@
-<h1>Build a Chatbot with Amazon lex</h1>
+<h1>Connects a Chatbot with lambda</h1>
 
 <h2>Description</h2>
  Amazon Lex is a fully managed service by AWS for building conversational interfaces into applications using voice and text. It uses automatic speech recognition (ASR) to convert speech to text and natural language understanding (NLU)
@@ -20,6 +20,11 @@
 <h2>Program walk-through:</h2>
 
 <p align="center">
+ <br />
+ Navigate to your lambda console
+  <br/>
+<img src="images/lx2.png" height="80%" width="80%" alt="key steps"/>
+<br />
  AWS Lambda Functions: I created a Lambda function to' Generate random Account balance for customers base on the account provided however in the real world the Lambda Function can be used to extract the user's bank balance from a database <br/>
  <img src="images/lx1.png" height="80%" width="80%" alt="key steps"/>
 <br />
@@ -32,33 +37,25 @@ Chatbot Alias:An alias in Amazon Lex is a pointer for a specific version of your
 <br />
 
 <br />
- configure bot setting: While creating my chatbot, I also created a role with basic permissions because' it will creat permissions to other AWS services if needed.
- In terms of the intent classification confidence score, I kept the default value of 0.40. This means'for my chatbot is it should at least be 40% confident about the intent goal of the chatbot user to respond in more technical terms.<br/>
+ TestBotAlias is a default version of your bot that's made for testing or
+ development.
+ To connect Lambda with my BankerBot, I visited my bot's TestBotAlias and the
+ custom Checkbalance slot.<br/>
 <img src="images/lx3.png" height="80%" width="80%" alt="key steps"/>
 <br />
 
 <br />
-Creat an Intents:  Intents are what the user is trying to achieve in their conversation with the chatbot.I created my first intent, WelcomeIntent, to' respond back to me base on my request<br/>
+ Code Hooks:
+ A Code hooks is a piece of code that can be connected to my chatbot to perform functions/actions that my chatbot cannot do alone/by default Even though I already connected my Lambda function with my chatbot's alias, I had to use code hooks because the chatbot is not able to calculate/return a bank balance figure on its own I could find code hooks at '.Fulfillment code hook sectio<br/>
 <img src="images/lx4.png" height="80%" width="80%" alt="key steps"/>
 <br />
 <br />
-FallbackIntent: I launched and tested my chatbot, which could respond successfully if I enter' Hello ,Hi,I need help and Can you help me? My chatbot returned the error message 'Intent FallbackIntent is fulfilled' when I entered... This error message occurred because'Amazon Lex doesn't quite recognize your utterance <br/>
+The final result!
+ 'I've set up my chatbot to trigger Lambda and return a random dollar figure
+ when customers request for there account Balance and Credencials asked by
+ the chatbot <br/>
 <img src="images/lx6.png" height="80%" width="80%" alt="key steps"/>
 <br />
-<br />
- Configuring FallbackIntent:FallbackIntent is a default intent in every chatbot that gets triggered when your chatbot has a confidence score below 40% for all the intents you've defined I wanted to configure FallbackIntent because' The default closing response to the user is not easily understandab <br/>
-<img src="images/lx7.png" height="80%" width="80%" alt="key steps"/>
-<br />
-<br />
-  Variation:  I also added variations! What this means for an end user is' they get to see different forms of the my chatbot's closing response <br/>
-<img src="images/lx8.png" height="80%" width="80%" alt="key steps"/>
-<br />
-<br />
- Test chatbot and Deploy: chatbot sucessful. <br/>
-<img src="images/lx9.png" height="80%" width="80%" alt="key steps"/>
-<br />
-
-
 </p>
 
 <!--
@@ -70,3 +67,4 @@ FallbackIntent: I launched and tested my chatbot, which could respond successful
 @@ text in purple (and bold)@@
 ```
 --!>
+
