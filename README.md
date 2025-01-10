@@ -23,17 +23,17 @@
  <br />
  Navigate to your lambda console
   <br/>
-<img src="images/lx2.png" height="80%" width="80%" alt="key steps"/>
+<img src="images/lx15.png" height="80%" width="80%" alt="key steps"/>
 <br />
  AWS Lambda Functions: I created a Lambda function to' Generate random Account balance for customers base on the account provided however in the real world the Lambda Function can be used to extract the user's bank balance from a database <br/>
- <img src="images/lx1.png" height="80%" width="80%" alt="key steps"/>
+ <img src="images/lx16.png" height="80%" width="80%" alt="key steps"/>
 <br />
  
 <br />
 Chatbot Alias:An alias in Amazon Lex is a pointer for a specific version of your bot. So when you're connecting Lex with other AWS services or your custom applications,those 
  external resources will connect to an alias, which will point to the specific version
   <br/>
-<img src="images/lx2.png" height="80%" width="80%" alt="key steps"/>
+<img src="images/lx17.png" height="80%" width="80%" alt="key steps"/>
 <br />
 
 <br />
@@ -41,20 +41,20 @@ Chatbot Alias:An alias in Amazon Lex is a pointer for a specific version of your
  development.
  To connect Lambda with my BankerBot, I visited my bot's TestBotAlias and the
  custom Checkbalance slot.<br/>
-<img src="images/lx3.png" height="80%" width="80%" alt="key steps"/>
+<img src="images/lx19.png" height="80%" width="80%" alt="key steps"/>
 <br />
 
 <br />
  Code Hooks:
  A Code hooks is a piece of code that can be connected to my chatbot to perform functions/actions that my chatbot cannot do alone/by default Even though I already connected my Lambda function with my chatbot's alias, I had to use code hooks because the chatbot is not able to calculate/return a bank balance figure on its own I could find code hooks at '.Fulfillment code hook sectio<br/>
-<img src="images/lx4.png" height="80%" width="80%" alt="key steps"/>
+<img src="images/lx20.png" height="80%" width="80%" alt="key steps"/>
 <br />
 <br />
 The final result!
  'I've set up my chatbot to trigger Lambda and return a random dollar figure
  when customers request for there account Balance and Credencials asked by
  the chatbot <br/>
-<img src="images/lx6.png" height="80%" width="80%" alt="key steps"/>
+<img src="images/lx23.png" height="80%" width="80%" alt="key steps"/>
 <br />
 </p>
 
